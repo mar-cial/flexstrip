@@ -1,82 +1,71 @@
-import Head from 'next/head'
+import { FC } from 'react'
+import SectionTitle from '../components/sectionTitle'
+import categories from '../data/categories.json'
+import Circle from '../components/circle'
+import Image from 'next/image'
 
-export default function Home() {
+const Home: FC = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <main className={'p-4'}>
+      {/* Hero */}
+      <section className={'py-6'}>
+        <div>
+          <h2 className="pt-2 pb-4 text-5xl font-bold">
+            The only PVC Roll provider you will ever need
+          </h2>
+          <p className="pb-4">
+            Flex Strip is a PVC roll supplier based in Mexicali, Baja
+            California. We have a wide variety of PVC rolls to meet your needs.
+            Our main categories are:
+          </p>
         </div>
-      </main>
+        <div className="grid grid-cols-3 gap-4">
+          {categories.map((category, i) => (
+            <div key={i} className={'grid gap-4 rounded-md p-4 shadow-md'}>
+              <div className="flex justify-between border-b-2 pb-2">
+                <h3 className="text-lg font-bold">{category.title}</h3>
+                <Circle />
+              </div>
+              <div className="grid gap-4">
+                <Image
+                  src={category.image}
+                  width={200}
+                  height={180}
+                  layout="responsive"
+                  className="rounded-md"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="ml-2 h-4" />
-        </a>
-      </footer>
-    </div>
+      {/* Calculator */}
+      <section className="border-y-2 py-4">
+        <h3 className={'text-2xl font-bold'}>Use our calculator</h3>
+        <p className="py-4">
+          Not sure how much plastic strips are you going to need? Use our
+          calculator to determine exactly how much you need using only the width
+          and height of the space you are covering.
+        </p>
+        <div className="flex h-40 items-center justify-center rounded-md bg-blue-500">
+          <span>
+            demo <br />
+            width x heigth
+          </span>
+        </div>
+      </section>
+
+      {/* footer? */}
+      <section className="border-b-2 py-4">
+        <SectionTitle titleText="Our products" />
+        <p className={'py-4'}>
+          We deliver the best quality of PVC Strip rolls right to your
+          warehouse. We also have hanging kits and complete pvc strip curtains.
+        </p>
+      </section>
+    </main>
   )
 }
+
+export default Home
