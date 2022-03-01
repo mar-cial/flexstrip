@@ -20,7 +20,7 @@ const Rolls = () => {
   return (
     <main className="pb-4">
       <SectionHeader text={'PVC Strip Door Bulk Rolls'} />
-      <section className="grid gap-4 py-6 md:grid-cols-4">
+      <section className="grid gap-4 py-6 md:grid-cols-3 lg:grid-cols-4">
         {rolls.map((roll, i) => {
           return (
             <div key={i} className={'border-2 p-4'}>
