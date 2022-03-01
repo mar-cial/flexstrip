@@ -10,8 +10,6 @@ const FlexStripApp = ({ Component, pageProps }) => {
         <title>Flex Strip</title>
       </Head>
 
-
-
       <MainLayout>
         <Component {...pageProps} />
       </MainLayout>

@@ -1,10 +1,8 @@
 import React from 'react'
-import Header from './header'
 import Navigation from './navigation'
 const MainLayout = ({ children }) => {
   return (
-    <div className="overflow-scroll bg-white text-black dark:bg-black dark:text-white">
-      <Header />
+    <div className=" h-screen overflow-scroll bg-white px-4 text-black dark:bg-black dark:text-white ">
       <Navigation />
       {children}
     </div>

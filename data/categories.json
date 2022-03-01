@@ -8,7 +8,8 @@
             "Empaques",
             "Pescaderías",
             "Carnicerías"
-        ]
+        ],
+        "navtitle": "/rolls"
     },
     {
         "title": "Hardware",
@@ -18,7 +19,8 @@
             "Acero galvanizado",
             "Stainless steel",
             "Herraje de plástico"
-        ]
+        ],
+        "navtitle": "/rolls"
     },
     {
         "title": "Complete curtains",
@@ -26,6 +28,7 @@
         "subtitle": "Cortinas listas para instalar",
         "uses": [
             "Utilize nuestra calculadora para determinar exactamente cuanto plástico y cuánto herraje necesita, sólo con el width y el height"
-        ]
+        ],
+        "navtitle": "/rolls"
     }
 ]

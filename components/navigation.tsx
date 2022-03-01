@@ -4,16 +4,8 @@ import Link from 'next/link'
 const Navigation = () => {
   const routes = [
     {
-      url: '/',
-      text: 'Home',
-    },
-    {
       url: '/rolls',
-      text: 'Rolls',
-    },
-    {
-      url: '/about',
-      text: 'About',
+      text: 'Products',
     },
     {
       url: '/contact',
@@ -22,11 +14,16 @@ const Navigation = () => {
   ]
 
   return (
-    <nav className="m-4 flex w-full justify-center">
-      <ul className="flex w-9/12 justify-between text-center">
+    <nav className="grid grid-cols-2 items-center py-6">
+      <div>
+        <Link href={'/'} passHref>
+          <a className={'text-2xl font-bold'}>Flex Strip</a>
+        </Link>
+      </div>
+      <ul className="grid grid-flow-col items-center justify-end gap-6">
         {routes.map((v, i) => {
           return (
-            <li key={i} className={'ml-4 w-full border-b-4'}>
+            <li key={i}>
               <Link href={v.url} passHref>
                 <a className="text-lg font-bold">{v.text}</a>
               </Link>
