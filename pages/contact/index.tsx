@@ -1,54 +1,58 @@
-import React, { FC } from 'react'
-import ContactForm from '../../components/contactForm'
-import InfoSectionHeader from '../../components/infoSectionHeader'
+/*
+ * Created by cesarmarcial on 05/03/22
+ */
 
-const Contact: FC = () => {
+// imports
+
+// interface
+
+// Beginning of component: contact
+import pageAnimationVariants from '../../animations/pageAnimationVariants'
+import { motion } from 'framer-motion'
+
+const Contact = () => {
+  const formHandler = () => {
+    alert(
+      "Thank you for checking this project! This doesn't send anything anywhere, yet."
+    )
+  }
   return (
-    <>
-      <main className="flex flex-col items-center pb-4 text-center">
-        <h2 className="text-4xl font-bold md:text-6xl">Contact us</h2>
-        <div className="grid w-full gap-4 md:grid-cols-3">
-          <div className="border-2 border-white p-4 ">
-            <InfoSectionHeader title="Form" />
-            <div className="pt-4">
-              <ContactForm />
-            </div>
-          </div>
-          <div className="border-2 border-white">
-            <InfoSectionHeader title="Our info" />
-            <div>
-              <h3 className={'text-lg font-bold text-gray-500'}>Address</h3>
-              <p>
-                Blvd. Adolfo López Mateos #2239-B <br />
-                Fracc. Las Palmas, c.p. 21360
-              </p>
-              <p>Mexicali, Baja California, México.</p>
-            </div>
-            <div>
-              <h3 className={'text-lg font-bold text-gray-500'}>Email</h3>
-              <p>ventas@flexstrip.com</p>
-            </div>
-            <div>
-              <h3 className={'text-lg font-bold text-gray-500'}>
-                Phone number
-              </h3>
-              <p>686-144-2222</p>
-            </div>
-          </div>
+    <motion.main
+      variants={pageAnimationVariants}
+      initial={'hidden'}
+      animate={'enter'}
+      exit={'hidden'}
+      className={'grid justify-center py-12'}
+    >
+      <h2 className={'text-6xl font-bold'}>Contact us</h2>
+      <p className={'pb-4'}>We'll get back to you as soon as we can.</p>
 
-          <div className="grid gap-6 border-2 border-white p-4">
-            <InfoSectionHeader title="Map" />
-            <p>
-              Aquí voy a poner un mapita pero todavía no, nomás va a ser un
-              cuadro como del tamaño del de abajo
-            </p>
-            <div className="flex h-48 items-center justify-center border-2 border-blue-200 bg-black text-red-300">
-              <span>Así mas o menos</span>
-            </div>
-          </div>
-        </div>
-      </main>
-    </>
+      <form
+        name={'contactform'}
+        action={''}
+        onSubmit={formHandler}
+        method={'post'}
+        className={'grid gap-4 border-2 p-2'}
+      >
+        <label htmlFor="name">Name</label>
+        <input type="text" className={'border-2'} />
+        <label htmlFor="email">Email</label>
+        <input type="text" className={'border-2'} />
+        <label htmlFor="company">Company</label>
+        <input type="text" className={'border-2'} />
+        <label htmlFor="message">Message</label>
+        <textarea name="message" id="message" className={'border-2'}>
+          Enter your message...
+        </textarea>
+        <motion.input
+          type="submit"
+          value={'Submit'}
+          className={'bg-blue-400 py-2 text-white cursor-pointer'}
+          whileHover={{ y: -3 }}
+          whileTap={{y:0}}
+        />
+      </form>
+    </motion.main>
   )
 }
 
