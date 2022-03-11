@@ -1,34 +1,45 @@
-/*
-* Created by cesarmarcial on 05/03/22
-*/
+import { NextPage } from 'next'
+import React from 'react'
+import PageTitle from '../../components/PageTitle'
+import Label from '../../components/Label'
+import rolls from '../../data/rolls'
+import Image from 'next/image'
+import Link from 'next/link'
+import PageContainer from '../../layout/pageContainer'
 
-// imports
-import {motion} from 'framer-motion'
-import pageAnimationVariants from '../../animations/pageAnimationVariants'
-import { FC } from 'react'
-import PageTitle from '../../components/pageTitle'
-
-// interface
-
-// Beginning of component: index
-const Products: FC = () => {
+const Products: NextPage = () => {
   return (
-    <motion.main
-      variants={pageAnimationVariants}
-      initial={'hidden'}
-      animate={'enter'}
-      exit={'hidden'}
-      className={"grid justify-center py-12"}
-    >
-      <PageTitle text={'Products'} />
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ ease: 'linear', duration: 4, repeat: Infinity }}
-        className={"w-24 h-24 bg-orange-200 rounded-full flex justify-center items-center"}
-      >
-        Pending
-      </motion.div>
-    </motion.main>
+    <PageContainer>
+      <section className="grid gap-4 py-6 md:grid-cols-3">
+        <header className="grid place-items-center md:col-span-3">
+          <h2 className="text-4xl font-bold text-bold">PVC Rolls</h2>
+        </header>
+        {rolls.map((roll, i) => {
+          return (
+            <article key={i} className={'grid gap-4 p-2 shadow-md'}>
+              <header>
+                <Image
+                  src={roll.image}
+                  width={2048}
+                  height={1536}
+                  layout="responsive"
+                  alt={roll.finish}
+                />
+                <Label text="Name" />
+                <h2 className="text-2xl font-bold">{roll.name}</h2>
+                <Label text="Finish" />
+                <h3 className="font-medium">{roll.finish}</h3>
+              </header>
+              <Link href={`/products/${roll.productid}`} passHref>
+                <a className="py-1 font-bold text-center text-white bg-black">
+                  Get more details
+                </a>
+              </Link>
+            </article>
+          )
+        })}
+      </section>
+    </PageContainer>
   )
 }
 

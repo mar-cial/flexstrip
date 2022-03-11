@@ -1,21 +1,24 @@
 const categories = [
   {
     title: 'PVC Rolls',
-    img: '/8flat.webp',
-    color: 'bg-blue-400',
     url: '/products/rolls',
+    image: '/8flat.webp',
+    description:
+      'If your warehouse needs protection from outside debris, or maintaining environment is in conflict with your productivity, American Door can install Vinyl Strip Curtains in your facility.',
   },
   {
     title: 'Hardware',
-    img: '/hardware.jpg',
-    color: 'bg-red-400',
     url: '/products/hardware',
+    image: '/hardware.jpg',
+    description:
+      'We have the correct type of mounting hardware for your curtain, with ease of installation as top priority.',
   },
   {
-    title: 'Curtains',
-    img: '/curtain.jpg',
-    color: 'bg-green-400',
+    title: 'Complete curtains',
     url: '/products/curtains',
+    image: '/curtain.jpg',
+    description:
+      'We ship complete curtains ready for installation, made exactly to your provided measurements. Ready to install.',
   },
 ]
 

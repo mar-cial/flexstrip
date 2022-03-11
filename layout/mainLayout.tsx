@@ -1,24 +1,11 @@
-/*
-* Created by cesarmarcial on 05/03/22
-*/
+import React, { FC, ReactNode } from 'react'
 
-// imports
-import { AnimatePresence, motion } from 'framer-motion'
-import React, { FC } from 'react'
-
-// types
-type Props = {
-  children: React.ReactNode
+type MainLayoutProps = {
+  children: ReactNode
 }
-
-// Beginning of component: mainLayout
-const MainLayout: FC<Props> = ({children}) => {
+const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
-    <AnimatePresence>
-
-        {children}
-
-    </AnimatePresence>
+    <div className="grid p-4 sm:grid-cols-4 md:grid-cols-12">{children}</div>
   )
 }
 

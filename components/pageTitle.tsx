@@ -1,18 +1,11 @@
-/*
- * Created by cesarmarcial on 05/03/22
- */
-
-// imports
-
-// interface
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 type Props = {
-  text: string
+  title: string
 }
-// Beginning of component: pageTitle
-const PageTitle: FC<Props> = ({ text }) => {
-  return <h2 className={'text-6xl font-bold'}>{text}</h2>
+
+const PageTitle: FC<Props> = ({ title }) => {
+  return <h1 className="p-4 text-4xl font-bold md:text-6xl">{title}</h1>
 }
 
 export default PageTitle
