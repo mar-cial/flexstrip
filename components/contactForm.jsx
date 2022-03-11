@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { motion } from 'framer-motion'
 const ContactForm = () => {
   const [fullname, setFullname] = useState('')
   const [email, setEmail] = useState('')
@@ -85,7 +85,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={'col-span-8 grid gap-2 p-4 shadow-md'}
+      className={' grid p-4 text-center md:col-span-3'}
     >
       <label htmlFor="fullname" className="text-lg font-bold">
         Full name
@@ -148,9 +148,14 @@ const ContactForm = () => {
           </p>
         )}
       </div>
-      <button type="submit" className="border-2">
+      <motion.button
+        type="submit"
+        className="mt-4 border-2"
+        whileHover={{ y: -3 }}
+        whileTap={{ y: 0 }}
+      >
         {buttonText}
-      </button>
+      </motion.button>
     </form>
   )
 }

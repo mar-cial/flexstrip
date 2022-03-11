@@ -52,7 +52,12 @@ const ProductPage: NextPage = (props: Props) => {
       </section>
       <section className="pt-4">
         <Label text="Spec Sheet" />
-        <DocumentText />
+        <a
+          href="/specsheets/spec.pdf"
+          download={`${selectedRoll.productid} Spec Sheet`}
+        >
+          <DocumentText />
+        </a>
       </section>
     </PageContainer>
   )

@@ -1,17 +1,19 @@
-export const hardware = [
+const hardware = [
   {
     name: 'Universal Galvanized Steel',
     price: 5.99,
-    image: '/hardwareimgs/hardware.jpg',
+    image: '/hardwareimgs/universal.png',
   },
   {
     name: 'Flat Galvanized Steel',
     price: 4.99,
-    image: '/hardwareimgs/hardware.jpg',
+    image: '/hardwareimgs/flat.png',
   },
   {
     name: 'FTP Plastic Bullets',
     price: 2.99,
-    image: '/hardwareimgs/hardware.jpg',
+    image: '/hardwareimgs/htp.png',
   },
 ]
+
+export default hardware

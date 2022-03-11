@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import React from 'react'
 import Label from '../../components/Label'
 import rolls from '../../data/rolls'
+import hardware from '../../data/hardwareData'
 import Image from 'next/image'
 import Link from 'next/link'
 import PageContainer from '../../layout/pageContainer'
@@ -34,6 +35,30 @@ const Products: NextPage = () => {
                   Get more details
                 </a>
               </Link>
+            </article>
+          )
+        })}
+      </section>
+
+      <section className="grid gap-4 py-6 md:grid-cols-3">
+        <header className="grid place-items-center md:col-span-3">
+          <h2 className="text-4xl font-bold text-bold">Hardware Kits</h2>
+        </header>
+        {hardware.map((hw, i) => {
+          return (
+            <article key={i} className={'grid gap-4 p-2 shadow-md'}>
+              <header>
+                <Image
+                  src={hw.image}
+                  width={400}
+                  height={254}
+                  alt={hw.name}
+                  layout="responsive"
+                />
+                <Label text="Name" />
+                <h3 className="text-2xl font-semibold">{hw.name}</h3>
+              </header>
+              <button>Learn more</button>
             </article>
           )
         })}

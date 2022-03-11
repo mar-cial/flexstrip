@@ -6,18 +6,14 @@ async function sendEmail(req, res) {
     await sendgrid.send({
       to: 'cesarmarcialq@gmail.com',
       from: 'cesarmarcialq@gmail.com',
-      subject: `Message from website : ${req.body.subject}`,
+      subject: `[FLEX STRIP] - Message from website: ${req.body.subject}`,
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">
       <head>
         <meta charset="utf-8">
-      
         <title>Flex Strip Testing</title>
         <meta name="description" content="Flex Strip Testing">
       <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
-      
-        
-      
       </head>
       
       <body>
