@@ -1,6 +1,5 @@
 import { NextPage } from 'next'
 import React from 'react'
-import PageTitle from '../../components/PageTitle'
 import Label from '../../components/Label'
 import rolls from '../../data/rolls'
 import Image from 'next/image'
