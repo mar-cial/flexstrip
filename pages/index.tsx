@@ -4,7 +4,7 @@ import PageContainer from '../layout/pageContainer'
 import categories from '../data/categories'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { motion } from 'framer-motion'
 const Home: NextPage = () => {
   return (
     <PageContainer>
@@ -16,28 +16,37 @@ const Home: NextPage = () => {
         </header>
       </main>
       <section className="grid gap-6 text-center ">
-        <h2>We provide the following solutions:</h2>
         <section className="grid w-full gap-4 md:grid-cols-3 ">
           {categories.map((category, i) => {
             return (
-              <article key={i} className={'grid text-center'}>
+              <article
+                key={i}
+                className={'grid content-between py-4 text-center'}
+              >
                 <header>
                   <Image
                     src={category.image}
-                    width={2000}
-                    height={1600}
+                    width={3024}
+                    height={3024}
                     layout="responsive"
                   />
                   <h3 className="pt-4 font-semibold sm:text-xl md:text-2xl">
                     {category.title}
                   </h3>
-                  <p className="text-gray-600">{category.description}</p>
+                  <p className="flex py-6 text-gray-600">
+                    {category.description}
+                  </p>
                 </header>
-                <div className="self-end mt-4 border-2">
-                  <Link href={'/products'} passHref>
-                    <a>Learn more</a>
-                  </Link>
-                </div>
+
+                <Link href={'/products'} passHref>
+                  <motion.a
+                    className="py-2 mt-3 font-medium text-white max-h-12 bg-main"
+                    whileHover={{ y: -3 }}
+                    whileTap={{ y: 0 }}
+                  >
+                    Learn more
+                  </motion.a>
+                </Link>
               </article>
             )
           })}

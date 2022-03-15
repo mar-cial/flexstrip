@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+
 const ContactForm = () => {
   const [fullname, setFullname] = useState('')
   const [email, setEmail] = useState('')
@@ -85,7 +86,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={' grid p-4 text-center md:col-span-3'}
+      className={'grid p-4 text-center md:col-span-3'}
     >
       <label htmlFor="fullname" className="text-lg font-bold">
         Full name

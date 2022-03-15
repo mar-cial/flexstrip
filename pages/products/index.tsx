@@ -20,8 +20,8 @@ const Products: NextPage = () => {
               <header>
                 <Image
                   src={roll.image}
-                  width={2048}
-                  height={1536}
+                  width={3024}
+                  height={3024}
                   layout="responsive"
                   alt={roll.finish}
                 />

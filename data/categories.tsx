@@ -2,9 +2,9 @@ const categories = [
   {
     title: 'PVC Rolls',
     url: '/products/rolls',
-    image: '/rollimgs/8flat.webp',
+    image: '/rollimgs/8stdflat.png',
     description:
-      'If your warehouse needs protection from outside debris, or maintaining environment is in conflict with your productivity, American Door can install Vinyl Strip Curtains in your facility.',
+      'We have the best quality PVC plastic rolls for strip curtains. These curtains are a great way to section your warehouse, reducing the flow of contaminants and saving money on energy costs.',
   },
   {
     title: 'Hardware',

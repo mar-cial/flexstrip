@@ -24,8 +24,8 @@ const ProductPage: NextPage = (props: Props) => {
     <PageContainer>
       <Image
         src={selectedRoll.image}
-        width={2048}
-        height={1536}
+        width={3048}
+        height={3048}
         layout="responsive"
       />
       <header className="pt-2">

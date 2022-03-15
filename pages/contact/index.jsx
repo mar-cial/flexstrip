@@ -8,6 +8,10 @@ const Contact = () => {
       <section className="grid gap-4 py-6 md:grid-cols-3">
         <header className="grid place-items-center md:col-span-3">
           <h2 className="text-4xl font-bold text-bold">Contact us!</h2>
+          <p>
+            Looking for a complete curtain? Leave us a message with the width x
+            height you need to cover and we will send a quote.
+          </p>
         </header>
         <ContactForm />
       </section>
