@@ -84,10 +84,7 @@ const ContactForm = () => {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className={'grid p-4 text-center md:col-span-3'}
-    >
+    <form onSubmit={handleSubmit} className={'grid gap-2 text-center'}>
       <label htmlFor="fullname" className="text-lg font-bold">
         Full name
       </label>

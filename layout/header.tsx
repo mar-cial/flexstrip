@@ -6,12 +6,16 @@ const Header: FC = () => {
   return (
     <header className="flex justify-center">
       <div className="w-1/2 pt-4 md:w-1/5">
-        <Image
-          src={'/logo.png'}
-          width={2355}
-          height={1290}
-          layout="responsive"
-        />
+        <Link href={'/'} passHref>
+          <a>
+            <Image
+              src={'/logo.png'}
+              width={2355}
+              height={1290}
+              layout="responsive"
+            />
+          </a>
+        </Link>
       </div>
     </header>
   )

@@ -1,10 +1,11 @@
-import { NextPage } from 'next'
 import React from 'react'
 import PageContainer from '../layout/pageContainer'
 import categories from '../data/categories'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { NextPage } from 'next'
+
 const Home: NextPage = () => {
   return (
     <PageContainer>
@@ -38,7 +39,7 @@ const Home: NextPage = () => {
                   </p>
                 </header>
 
-                <Link href={'/products'} passHref>
+                <Link href={category.url} passHref>
                   <motion.a
                     className="py-2 mt-3 font-medium text-white max-h-12 bg-main"
                     whileHover={{ y: -3 }}

@@ -31,7 +31,7 @@ const Products: NextPage = () => {
                 <h3 className="font-medium">{roll.finish}</h3>
               </header>
               <Link href={`/products/${roll.productid}`} passHref>
-                <a className="py-1 font-bold text-center text-white bg-black">
+                <a className="py-1 font-bold text-center text-white bg-main">
                   Get more details
                 </a>
               </Link>
@@ -40,13 +40,13 @@ const Products: NextPage = () => {
         })}
       </section>
 
-      <section className="grid gap-4 py-6 md:grid-cols-3">
+      <section className="grid gap-4 py-6 md:grid-cols-3" id="hardware-section">
         <header className="grid place-items-center md:col-span-3">
           <h2 className="text-4xl font-bold text-bold">Hardware Kits</h2>
         </header>
         {hardware.map((hw, i) => {
           return (
-            <article key={i} className={'grid gap-4 p-2 shadow-md'}>
+            <article key={i} className={' grid gap-4 p-2 shadow-md'}>
               <header>
                 <Image
                   src={hw.image}
@@ -58,7 +58,11 @@ const Products: NextPage = () => {
                 <Label text="Name" />
                 <h3 className="text-2xl font-semibold">{hw.name}</h3>
               </header>
-              <button>Learn more</button>
+              <Link href={`/contact`} passHref>
+                <a className="self-end py-1 font-bold text-center text-white bg-main">
+                  Get more details
+                </a>
+              </Link>
             </article>
           )
         })}
