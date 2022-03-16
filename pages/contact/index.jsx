@@ -14,18 +14,17 @@ const Contact = () => {
           </p>
         </header>
         <ContactForm />
-        <footer className="text-center ">
-          <h2 className="text-4xl font-bold">Location</h2>
-        </footer>
       </section>
-      {/* 
-      <footer className="grid gap-4 py-6 md:grid-cols-3">
-        <header className="grid place-items-center md:col-span-3">
-          <h2 className="text-4xl font-bold text-bold">Our links</h2>
+
+      <footer className="grid justify-center gap-4 py-6 text-center">
+        <header className="grid">
+          <h2 className="text-4xl font-bold text-bold">Location</h2>
         </header>
+        <p>Blvd. Adolfo López Mateos #2239-B</p>
+        <p>Fracc. Las Palmas</p>
+        <p>Mexicali, Baja California</p>
+        <p>Zip code 21360</p>
       </footer>
-    
-  */}
     </PageContainer>
   )
 }
