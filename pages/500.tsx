@@ -3,7 +3,7 @@ import React from 'react'
 const Server500 = () => {
   return (
     <>
-      <h2>There was a Server 500 error.</h2>
+      <h1 className={'text-6xl font-bold'}>Internal server error.</h1>
     </>
   )
 }

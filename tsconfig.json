@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_document.js", "pages/_app.js", "pages/products/[rolldetail].jsx", "pages/products/[rolldetail].jsx", "pages/products/index.jsx", "pages/contact/index.jsx", "components/contactForm.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_document.js", "pages/_app.js", "pages/productos/[rolldetail].jsx", "pages/productos/[rolldetail].jsx", "pages/productos/index.jsx", "pages/contacto/index.jsx", "components/contactForm.jsx"],
   "exclude": ["node_modules"]
 }

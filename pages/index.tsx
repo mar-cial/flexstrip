@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <main className="flex flex-col items-center justify-center py-6 text-center ">
         <header>
           <h1 className="text-4xl font-bold">
-            We are national suppliers of PVC plastic rolls.
+            Somos proveedores nacionales de rollos de plástico PVC.
           </h1>
         </header>
       </main>
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
                     whileHover={{ y: -3 }}
                     whileTap={{ y: 0 }}
                   >
-                    Learn more
+                    Saber más
                   </motion.a>
                 </Link>
               </article>

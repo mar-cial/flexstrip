@@ -1,24 +1,24 @@
 const categories = [
   {
-    title: 'PVC Rolls',
-    url: '/products',
+    title: 'Rollos PVC',
+    url: '/productos',
     image: '/rollimgs/8stdflat.png',
     description:
-      'We have the best quality PVC plastic rolls for strip curtains. These curtains are a great way to section your warehouse, reducing the flow of contaminants and saving money on energy costs.',
+      'Contamos con una gran variedad de rollos de plástico en stock.',
   },
   {
-    title: 'Hardware',
-    url: '/products/#hardware-section',
-    image: '/hardwareimgs/hardware.jpg',
+    title: 'Herraje',
+    url: '/productos/#hardware-section',
+    image: '/hardwareimgs/flat.png',
     description:
-      'We have the correct type of mounting hardware for your curtain, with ease of installation as top priority.',
+      'Le proporcionamos herraje para colgar sus cortinas de plástico. Fáciles de instalar y reemplazar.',
   },
   {
-    title: 'Complete curtains',
-    url: '/contact',
+    title: 'Cortinas completas',
+    url: '/contacto',
     image: '/curtain.jpg',
     description:
-      'We ship complete curtains ready for installation, made exactly to your provided measurements. Ready to install.',
+      'Ofrecemos el servicio de fabricación de cortinas completas, listas para instalar. Sólo proporcione el ancho y alto en el formulario de contacto y le mandaremos una cotización.',
   },
 ]
 

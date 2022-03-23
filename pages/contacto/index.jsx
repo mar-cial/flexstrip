@@ -5,7 +5,7 @@ import PageContainer from '../../layout/pageContainer'
 const Contact = () => {
   return (
     <PageContainer>
-      <section className="grid gap-4 py-6">
+      <section className="grid gap-4 py-6 text-center">
         <header className="grid justify-center place-items-center ">
           <h2 className="text-4xl font-bold text-bold">Contact us!</h2>
           <p>
@@ -18,7 +18,7 @@ const Contact = () => {
 
       <footer className="grid justify-center gap-4 py-6 text-center">
         <header className="grid">
-          <h2 className="text-4xl font-bold text-bold">Location</h2>
+          <h2 className="text-4xl font-bold text-bold">Ubicación</h2>
         </header>
         <p>Blvd. Adolfo López Mateos #2239-B</p>
         <p>Fracc. Las Palmas</p>

@@ -1,15 +1,15 @@
 const routes = [
   {
     url: '/',
-    text: 'Home',
+    text: 'Inicio',
   },
   {
-    url: '/products',
-    text: 'Products',
+    url: '/productos',
+    text: 'Productos',
   },
   {
-    url: '/contact',
-    text: 'Contact',
+    url: '/contacto',
+    text: 'Contacto',
   },
 ]
 

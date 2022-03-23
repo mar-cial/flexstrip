@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 import DocumentText from '../../components/DocumentText'
@@ -34,30 +35,23 @@ const ProductPage: NextPage = (props: Props) => {
       </header>
       <section className="pt-2">
         <Label text="Description" />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-          similique minima eius voluptates. Odit saepe vel autem sint, iste
-          cumque ipsam officia, reprehenderit amet enim rem veritatis aliquam
-          blanditiis at?
-        </p>
+        <p>{selectedRoll.detailsText}</p>
       </section>
       <section className="pt-2">
         <Label text="Uses" />
         <ul>
-          <li>Use 1</li>
-          <li>Use 2</li>
-          <li>Use 3</li>
-          <li>Use 4</li>
+          {selectedRoll.uses.map((use, i) => {
+            return <li key={i}>{use.title}</li>
+          })}
         </ul>
       </section>
-      <section className="pt-4">
-        <Label text="Spec Sheet" />
-        <a
-          href="/specsheets/spec.pdf"
-          download={`${selectedRoll.productid} Spec Sheet`}
-        >
-          <DocumentText />
-        </a>
+      <section className="flex flex-col py-6">
+        <Label text="Saber más" />
+        <Link href={'/contacto'}>
+          <a className="text-2xl font-bold transition-all text-light hover:text-main">
+            Contáctenos para saber más!
+          </a>
+        </Link>
       </section>
     </PageContainer>
   )
