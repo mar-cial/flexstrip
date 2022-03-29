@@ -21,8 +21,8 @@ const RollCard: FC<RollCardProps> = ({ roll }) => {
       <header>
         <Image
           src={roll.image}
-          width={3024}
-          height={3024}
+          width={600}
+          height={600}
           layout="responsive"
           alt={roll.finish}
         />
