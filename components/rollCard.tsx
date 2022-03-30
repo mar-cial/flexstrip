@@ -1,15 +1,8 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
 import Label from './Label'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
 import MoreDetailsButton from './moreDetailsButton'
-type Roll = {
-  image: string
-  name: string
-  finish: string
-  productid: string
-}
+import { Roll } from '../data/rolls'
 
 type RollCardProps = {
   roll: Roll
@@ -25,6 +18,8 @@ const RollCard: FC<RollCardProps> = ({ roll }) => {
           height={600}
           layout="responsive"
           alt={roll.finish}
+          placeholder="blur"
+          blurDataURL={roll.image}
         />
         <Label text="Name" />
         <h2 className="text-2xl font-bold">{roll.name}</h2>

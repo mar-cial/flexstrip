@@ -1,4 +1,10 @@
-const hardware = [
+export interface Hardware {
+  name:  string;
+  price: number;
+  image: string;
+}
+
+const hardware: Hardware[] = [
   {
     name: 'Universal Galvanized Steel',
     price: 5.99,

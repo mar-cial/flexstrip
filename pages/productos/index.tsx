@@ -1,15 +1,26 @@
-import { NextPage } from 'next'
 import React from 'react'
-import Label from '../../components/Label'
-import rolls from '../../data/rolls'
-import hardware from '../../data/hardwareData'
-import Image from 'next/image'
-import Link from 'next/link'
+import rolls, { Roll } from '../../data/rolls'
+import hardware, { Hardware } from '../../data/hardwareData'
 import PageContainer from '../../layout/pageContainer'
 import RollCard from '../../components/rollCard'
 import HardwareCard from '../../components/hardwareCard'
+import { GetStaticProps, NextPage } from 'next'
 
-const Products: NextPage = () => {
+type ProductsProps = {
+  rolls: Roll[],
+  hardware: Hardware[]
+
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      rolls, hardware
+    }
+  }
+}
+
+const Products: NextPage<ProductsProps> = ({rolls, hardware}) => {
   return (
     <PageContainer>
       <section className="grid gap-4 py-6 md:grid-cols-3">

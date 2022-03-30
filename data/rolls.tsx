@@ -1,16 +1,36 @@
-export const rolls = [
+export interface Roll {
+  name: string
+  finish: string
+  image: string
+  productid: string
+  dimensions: Dimension
+  detailsText: string
+  uses: Use[]
+}
+
+export interface Dimension {
+  width: number
+  thickness: number
+  length: number
+}
+
+export interface Use {
+  title: string
+  icon: string
+}
+
+export const rolls: Roll[] = [
   {
     name: `8" x .080" x 300'`,
     finish: 'Standard Flat',
     image: '/rollimgs/8stdflat.png',
     productid: 'PL8080300SF',
-    dimensions: [
-      {
-        width: 8,
-        thickness: 0.08,
-        length: 300,
-      },
-    ],
+    dimensions: {
+      width: 8,
+      thickness: 0.08,
+      length: 300,
+    },
+
     detailsText:
       'Rollo de plástico PVC ideal para seccionar áreas en un espacio laboral. Nuestros rollos de plástico liso transparente, ya sea de 8" o 12" pulgadas de ancho, son ideales para el paso seguro de personal debido a su visión de ambos lados. Recomendado para el tráfico peatonal de colaboradores.',
     uses: [
@@ -34,13 +54,11 @@ export const rolls = [
     finish: 'Standard Ribbed',
     image: '/rollimgs/8rib.png',
     productid: 'PL8072150SR',
-    dimensions: [
-      {
-        width: 8,
-        thickness: 0.072,
-        length: 150,
-      },
-    ],
+    dimensions: {
+      width: 8,
+      thickness: 0.072,
+      length: 150,
+    },
     detailsText:
       'Rollo de plástico PVC ideal para seccionar áreas en un espacio laboral. Nuestros rollos de plástico con costilla transparente, ya sea de 8" o 12" pulgadas de ancho, son ideales para el paso seguro de personal debido a su visión de ambos lados. Recomendado para el tráfico peatonal de colaboradores con herramientas, pallet jacks, mercancía en general y cuando la cortina está ubicada en un vano expuesto al exterior.',
     uses: [
@@ -64,13 +82,12 @@ export const rolls = [
     finish: 'Low Temperature Ribbed',
     image: '/rollimgs/8lowtemprib.png',
     productid: 'PL8072150LTR',
-    dimensions: [
-      {
-        width: 8,
-        thickness: 0.072,
-        length: 150,
-      },
-    ],
+    dimensions: {
+      width: 8,
+      thickness: 0.072,
+      length: 150,
+    },
+
     detailsText:
       'Rollo de plástico PVC ideal para seccionar áreas en un espacio laboral con cuartos fríos. Nuestros rollos de plástico con costilla transparente, ya sea de 8" o 12" pulgadas de ancho, son ideales para el paso seguro de personal debido a su visión de ambos lados. Recomendado para el paso peatonal con mercancía o herramientas dentro de un cuarto frío. Para puertas ubicadas en el interior de cuartos fríos.',
     uses: [
@@ -94,13 +111,11 @@ export const rolls = [
     finish: 'Low Temp Reinforced',
     image: '/rollimgs/8ref.png',
     productid: 'PL8080300LTR',
-    dimensions: [
-      {
-        width: 8,
-        thickness: 0.08,
-        length: 300,
-      },
-    ],
+    dimensions: {
+      width: 8,
+      thickness: 0.08,
+      length: 300,
+    },
     detailsText:
       'Rollo de plástico PVC ideal para seccionar áreas en un espacio laboral con cuartos fríos. Nuestros rollos de plástico con costilla transparente, ya sea de 8" o 12" pulgadas de ancho, son ideales para el paso seguro de personal en cuartos fríos debido a su visión de ambos lados. Recomendado para el tráfico peatonal de colaboradores con mercancía en cuartos fríos. Cuenta con un hilo reforzado que incrementa la durabilidad de la cortina.',
     uses: [
@@ -124,13 +139,12 @@ export const rolls = [
     finish: 'Reinforced',
     image: '/rollimgs/8ref.png',
     productid: 'PL8080300R',
-    dimensions: [
-      {
-        width: 8,
-        thickness: 0.08,
-        length: 300,
-      },
-    ],
+    dimensions: {
+      width: 8,
+      thickness: 0.08,
+      length: 300,
+    },
+
     detailsText:
       'Rollo de plástico PVC ideal para seccionar áreas en un espacio laboral. Nuestros rollos de plástico transparente, ya sea de 8" o 12" pulgadas de ancho, son ideales para el paso seguro de personal debido a su visión de ambos lados. Recomendado para el tráfico peatonal de colaboradores con herramientas, pallet jacks y mercancía en general.',
     uses: [
@@ -154,13 +168,12 @@ export const rolls = [
     finish: 'Welding Flat',
     image: '/rollimgs/8ambar.png',
     productid: 'PL8080300WF',
-    dimensions: [
-      {
-        width: 8,
-        thickness: 0.08,
-        length: 300,
-      },
-    ],
+    dimensions: {
+      width: 8,
+      thickness: 0.08,
+      length: 300,
+    },
+
     detailsText:
       'Rollo de plástico PVC ideal para seccionar áreas en un espacio laboral. Nuestros rollos de plástico con acabado para soldadura, ya sea de 8" o 12" pulgadas de ancho, son ideales para indicarle a los colaboradores que está entrando a un área de soldadura, así como protegerlos de esta.',
     uses: [
@@ -188,6 +201,11 @@ export const rolls = [
 
     detailsText:
       'Rollo de plástico PVC ideal para seccionar áreas en un espacio laboral. Nuestros rollos de plástico liso transparente, ya sea de 8" o 12" pulgadas de ancho, son ideales para el paso seguro de personal debido a su visión de ambos lados. Recomendado para el tráfico peatonal de colaboradores.',
+    dimensions: {
+      width: 12,
+      thickness: 0.12,
+      length: 200,
+    },
     uses: [
       {
         title: 'Seccionamiento de áreas',
@@ -211,6 +229,11 @@ export const rolls = [
     productid: 'PL12110150SR',
     detailsText:
       'Rollo de plástico PVC ideal para seccionar áreas en un espacio laboral. Nuestros rollos de plástico con costilla transparente, ya sea de 8" o 12" pulgadas de ancho, son ideales para el paso seguro de personal debido a su visión de ambos lados. Recomendado para el tráfico peatonal de colaboradores con herramientas, pallet jacks, mercancía en general y cuando la cortina está ubicada en un vano expuesto al exterior.',
+    dimensions: {
+      width: 12,
+      thickness: 0.11,
+      length: 150,
+    },
     uses: [
       {
         title: 'Seccionamiento de áreas',
@@ -235,6 +258,11 @@ export const rolls = [
 
     detailsText:
       'Rollo de plástico PVC ideal para seccionar áreas en un espacio laboral. Nuestros rollos de plástico anti insectos, ya sea de 8" o 12" pulgadas de ancho, son ideales para repeler insectos que intenten ingresar al área laboral. Recomendado para el tráfico peatonal de colaboradores con mercancía en general cuando se desee evitar el paso de insectos.',
+    dimensions: {
+      width: 12,
+      thickness: 0.11,
+      length: 150,
+    },
     uses: [
       {
         title: 'Seccionamiento de áreas',
@@ -259,6 +287,11 @@ export const rolls = [
 
     detailsText:
       'Rollo de plástico PVC ideal para seccionar áreas en un espacio laboral. Nuestros rollos de plástico anti insectos, ya sea de 8" o 12" pulgadas de ancho, son ideales para repeler insectos que intenten ingresar al área laboral. Recomendado para el tráfico peatonal de colaboradores con mercancía en general cuando se desee evitar el paso de insectos.',
+    dimensions: {
+      width: 12,
+      thickness: 0.11,
+      length: 150,
+    },
     uses: [
       {
         title: 'Seccionamiento de áreas',

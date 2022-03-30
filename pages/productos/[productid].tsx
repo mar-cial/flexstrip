@@ -1,16 +1,13 @@
-import { NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import React from 'react'
-import DocumentText from '../../components/DocumentText'
 import Label from '../../components/Label'
 import rolls from '../../data/rolls'
 import PageContainer from '../../layout/pageContainer'
+import { NextPage } from 'next'
+import { useRouter } from 'next/router'
 
-type Props = {}
-
-const ProductPage: NextPage = (props: Props) => {
+const ProductPage: NextPage = () => {
   const router = useRouter()
 
   const selectedRoll = rolls.find(

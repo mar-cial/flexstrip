@@ -1,13 +1,8 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
 import Label from './Label'
-import Link from 'next/link'
 import MoreDetailsButton from './moreDetailsButton'
-
-type Hardware = {
-  name: string
-  image: string
-}
+import { Hardware } from '../data/hardwareData'
 
 type HardwareCardProps = {
   hw: Hardware
