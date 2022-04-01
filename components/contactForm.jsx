@@ -42,9 +42,11 @@ const ContactForm = () => {
 
     let isValidForm = handleValidation()
 
+    
     if (isValidForm) {
       setButtonText('Sending')
-      const res = await fetch('/api/sendgrid', {
+      { /* 
+        const res = await fetch('/api/sendgrid', {
         body: JSON.stringify({
           email: email,
           fullname: fullname,
@@ -56,6 +58,7 @@ const ContactForm = () => {
         },
         method: 'POST',
       })
+    */ }
 
       const { error } = await res.json()
       if (error) {
